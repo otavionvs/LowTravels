@@ -20,5 +20,7 @@ public class AcentosViagem {
     @ManyToOne
     @JoinColumn(name = "codigo_trasporte", nullable = false)
     private Transporte transporte;
-//    private
+    @ManyToOne
+    @JoinColumn(name = "codigo_viagem", nullable = false)
+    private Viagem viagem;
 }
