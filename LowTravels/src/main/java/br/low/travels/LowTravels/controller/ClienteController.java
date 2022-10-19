@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/editoralivros/cliente")
+@RequestMapping("/lowtravels/cliente")
 public class ClienteController {
     private ClienteService clienteService;
 
