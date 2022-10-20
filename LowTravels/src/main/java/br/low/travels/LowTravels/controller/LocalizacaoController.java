@@ -48,7 +48,7 @@ public class LocalizacaoController {
         }else{
             Localizacao localizacaoModel = new Localizacao();
             BeanUtils.copyProperties(livroOptional, localizacaoModel);
-            return ResponseEntity.status(HttpStatus.OK).body(localizacaoService.save(localizacaoModel000000000000000000));
+            return ResponseEntity.status(HttpStatus.OK).body(localizacaoService.save(localizacaoModel));
         }
     }
 
