@@ -49,8 +49,8 @@ public class TransporteController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> deleteById(@PathVariable(value = "id") Integer id) {
-        Optional<Transporte> transporteOptional = transporteService.findById(id);
-        if(transporteOptional.isEmpty()){
+        Optional<Transporte> transOptional = transporteService.findById(id);
+        if(transOptional.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("Não Encontrado \n ID: " + id);
         }
