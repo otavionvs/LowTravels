@@ -23,4 +23,8 @@ public class AcentosViagem {
     @ManyToOne
     @JoinColumn(name = "codigo_viagem", nullable = false)
     private Viagem viagem;
+
+    public AcentosViagem(boolean b, Integer transporte_id, Integer id) {
+        super();
+    }
 }
