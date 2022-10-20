@@ -11,23 +11,5 @@ import java.util.Optional;
 public class ViagemController {
     ViagemService viagemService;
 
-    public List<Localizacao> findAll() {
-        return viagemService.findAll();
-    }
 
-    public <S extends Localizacao> S save(S entity) {
-        return viagemService.save(entity);
-    }
-
-    public boolean existsById(Integer integer) {
-        return viagemService.existsById(integer);
-    }
-
-    public void deleteById(Integer integer) {
-        viagemService.deleteById(integer);
-    }
-
-    public <S extends Localizacao> Optional<S> findOne(Example<S> example) {
-        return viagemService.findOne(example);
-    }
 }
