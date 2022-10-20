@@ -12,7 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
@@ -20,7 +20,7 @@ import java.util.Optional;
 
 @AllArgsConstructor
 @Controller
-@RequestMapping("/viagem")
+@RequestMapping("lowtravels/viagem")
 public class ViagemController {
     private ViagemService viagemService;
     private AcentosViagemService acentosViagemService;

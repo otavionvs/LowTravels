@@ -14,20 +14,14 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/editoralivros/cliente")
+@RequestMapping("/lowtravels/cliente")
 public class ClienteController {
     private ClienteService clienteService;
 
     public ClienteController(ClienteService clienteService) {
         this.clienteService = clienteService;
     }
-
-    @GetMapping
-    public ResponseEntity<List<Cliente>> findAll() {
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(clienteService.findAll());
-    }
-
+    
     @PostMapping
     public ResponseEntity<Object> save(@RequestBody @Valid ClienteDTO clienteDTO) {
         Optional<Cliente> pessoaOptional =
@@ -46,6 +40,12 @@ public class ClienteController {
         BeanUtils.copyProperties(clienteDTO, cliente);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(clienteService.save(cliente));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Cliente>> findAll() {
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(clienteService.findAll());
     }
 
     @GetMapping("/{cpf}")
