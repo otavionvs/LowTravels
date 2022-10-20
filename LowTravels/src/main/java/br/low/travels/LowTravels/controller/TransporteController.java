@@ -18,7 +18,8 @@ import java.util.Optional;
 
 @AllArgsConstructor
 @Controller
-@RequestMapping("/transporte")
+@RequestMapping("lowtravels/transporte")
+
 public class TransporteController {
     private TransporteService transporteService;
 

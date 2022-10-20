@@ -8,4 +8,5 @@ import lombok.ToString;
 public class LocalizacaoDTO {
     private String tipo;
     private String nome;
+    private Integer id;
 }
