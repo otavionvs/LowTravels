@@ -18,9 +18,9 @@ public class Viagem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, unique = true)
-    Integer id;
+    private Integer id;
     @Column(nullable = false)
-    String nome;
+    private String nome;
     @ManyToMany
     @JoinTable(name = "viagem_localizacao", joinColumns =
     @JoinColumn(name = "id_viagem", nullable = false),

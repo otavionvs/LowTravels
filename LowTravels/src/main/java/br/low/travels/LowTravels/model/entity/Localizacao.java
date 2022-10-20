@@ -16,10 +16,10 @@ public class Localizacao {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, unique = true)
-    Integer id;
+    private Integer id;
     @Column(nullable = false)
-    Integer tipo;
+    private Integer tipo;
     @Column(nullable = false, length = 50)
-    Integer nome;
+    private Integer nome;
 
 }
