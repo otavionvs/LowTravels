@@ -21,15 +21,15 @@ public class TransporteService {
         return transporteRepository.save(transporte);
     }
 
-    public Optional<Transporte> findById(Integer codigo) {
-        return transporteRepository.findById(codigo);
+    public Optional<Transporte> findById(Integer id) {
+        return transporteRepository.findById(id);
     }
 
-    public boolean existsById(Integer codigo) {
-        return transporteRepository.existsById(codigo);
+    public boolean existsById(Integer id) {
+        return transporteRepository.existsById(id);
     }
 
-    public void deleteById(Integer codigo) {
-        transporteRepository.deleteById(codigo);
+    public void deleteById(Integer id) {
+        transporteRepository.deleteById(id);
     }
 }
