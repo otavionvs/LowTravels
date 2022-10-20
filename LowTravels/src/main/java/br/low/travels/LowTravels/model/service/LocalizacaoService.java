@@ -7,6 +7,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @NoArgsConstructor
@@ -27,5 +28,13 @@ public class LocalizacaoService {
 
     public <S extends Localizacao> boolean exists(Example<S> example) {
         return localizacaoRepository.exists(example);
+    }
+
+    public Optional<Localizacao> findById(Integer integer) {
+        return localizacaoRepository.findById(integer);
+    }
+
+    public boolean existsById(Integer integer) {
+        return localizacaoRepository.existsById(integer);
     }
 }
