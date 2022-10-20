@@ -3,6 +3,7 @@ package br.low.travels.LowTravels.controller;
 import br.low.travels.LowTravels.dto.LocalizacaoDTO;
 import br.low.travels.LowTravels.model.entity.Localizacao;
 import br.low.travels.LowTravels.model.service.LocalizacaoService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,10 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
+@AllArgsConstructor
 @Controller
+@RequestMapping("lowtravels/localizacao")
+
 public class LocalizacaoController {
     LocalizacaoService localizacaoService;
 
@@ -22,7 +26,7 @@ public class LocalizacaoController {
         return ResponseEntity.status(HttpStatus.OK).body(localizacaoService.findAll());
     }
 
-    @GetMapping("/loc/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Object> findById(@PathVariable(name = "id") Integer id) {
         Optional<Localizacao> localizacaoOptional = localizacaoService.findById(id);
         if(localizacaoOptional.isEmpty()){
@@ -52,7 +56,7 @@ public class LocalizacaoController {
         }
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Object> deleteById(@PathVariable(value = "id") Integer integer) {
         localizacaoService.deleteById(integer);
         return ResponseEntity.status(HttpStatus.OK).body("Livro deletado com sucesso");

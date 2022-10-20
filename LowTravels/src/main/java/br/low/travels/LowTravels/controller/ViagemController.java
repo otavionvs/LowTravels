@@ -12,6 +12,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @Controller
 @RequestMapping("lowtravels/viagem")
+
 public class ViagemController {
     ViagemService viagemService;
 
