@@ -35,7 +35,7 @@ public class TransporteController {
         }
         return ResponseEntity.status(HttpStatus.OK).body(transOptional);
     }
-    
+
     public Transporte save(Transporte transporte) {
         return transporteService.save(transporte);
     }
